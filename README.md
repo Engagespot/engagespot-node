@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/@engagespot%2Fnode.svg)](https://badge.fury.io/js/@engagespot%2Fnode)
+
 This is the official node.js library for communicating with Engagespot REST API. Send multi-channel notifications from your node app.
 
 # Installation

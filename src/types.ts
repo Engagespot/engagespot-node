@@ -22,8 +22,16 @@ export interface IEngagespotProviderOverrideConfig{
     [key: string]: number;
 }
 
+type Channel = 'inApp' | 'webPush' | 'email' | 'mobilePush'
+
 export interface IEngagespotOverride{
-    [key: string]: IEngagespotProviderOverrideConfig;
+    channels?: Array<Channel>
+    mailgun?: IEngagespotProviderOverrideConfig;
+    sendgrid_email?: IEngagespotProviderOverrideConfig;
+    ses?: IEngagespotProviderOverrideConfig;
+    smtp_email?: IEngagespotProviderOverrideConfig;
+    default_webpush?: IEngagespotProviderOverrideConfig;
+    fcm?: IEngagespotProviderOverrideConfig;
 }
 
 export interface IEngagespotSendParams {

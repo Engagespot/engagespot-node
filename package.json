@@ -1,11 +1,13 @@
 {
   "name": "@engagespot/node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node.js library for communicating with Engagespot REST API. Send multi-channel notifications from your node app.",
   "main": "lib/index.js",
   "scripts": {
     "build": "npx tsc"
   },
+  "homepage": "https://github.com/Engagespot/engagespot-node",
+  "repository": "git@github.com:Engagespot/engagespot-node.git",
   "keywords": [
     "engagespot",
     "node",

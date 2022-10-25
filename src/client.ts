@@ -1,4 +1,4 @@
-import { IEngagespotOptions, IEngagespotSendParams } from "./types";
+import { IEngagespotOptions, IEngagespotSendParams, IEngagespotUserProfile } from "./types";
 
 const send = (options: IEngagespotOptions) => {
 
@@ -11,8 +11,20 @@ const send = (options: IEngagespotOptions) => {
   }
 };
 
+const createOrUpdateUser = (options:IEngagespotOptions) => {
+
+  return async (identifier: string, profile?: IEngagespotUserProfile) => {
+
+    const response = await options.httpClient.put("/users/"+identifier, profile);
+
+    return response.data as string;
+
+  }
+};
+
 export const engagespot = (options: IEngagespotOptions) => {
   return {
-    send: send(options)
+    send: send(options),
+    createOrUpdateUser: createOrUpdateUser(options)
   };
 };

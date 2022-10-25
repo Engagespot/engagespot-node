@@ -34,3 +34,33 @@ client.send({
 ```
 
 Refer [Engagespot REST API Docs](https://documentation.engagespot.co/docs/rest-api) to get the list of all supported parameters.
+
+# Advanced Configurations
+
+Methods and supported parameters.
+
+```javascript
+import { EngagespotClient } from "@engagespot/node";
+
+const client = EngagespotClient({
+    apiKey:'ENGAGESPOT_API_KEY',
+    apiSecret:'ENGAGESPOT_API_SECRET'
+})
+
+const params = {
+    notification:{
+        title: "Agent X commented on your support ticket #T-793465",
+        message: "Dear Customer, We're working on your ticket.",
+        url: "https://support.mydomain.com/tickets/793465",
+        icon: "https://cdn.support.mydomain.com/images/agent_x_profile.png"
+    },
+    recipients:['customer@gmail.com']
+}
+
+client.send(params);
+
+//Creating or Updating a user
+client.createOrUpdateUser("identifier",{
+    "optional":"profile key value pair",
+})
+```

@@ -40,3 +40,8 @@ export interface IEngagespotSendParams {
     override?: IEngagespotOverride
 }
 
+export interface IEngagespotUserProfile {
+    email?: string
+    phoneNumner?: string
+    [key: string]: any
+}

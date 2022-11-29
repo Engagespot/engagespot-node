@@ -11,7 +11,8 @@ export interface IEngagespotOptions {
 }
 
 export interface IEngagespotNotification {
-    title: string,
+    templateId?: string,
+    title?: string,
     message?: string,
     url?:string,
     icon?:string

@@ -38,6 +38,7 @@ export interface IEngagespotOverride{
 export interface IEngagespotSendParams {
     notification: IEngagespotNotification,
     recipients: Array<string>,
+    category?: string,
     override?: IEngagespotOverride
 }
 

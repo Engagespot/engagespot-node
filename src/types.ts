@@ -41,6 +41,7 @@ export interface IEngagespotSendParams {
     recipients: Array<string>,
     category?: string,
     override?: IEngagespotOverride
+    data?: any;
 }
 
 export interface IEngagespotUserProfile {

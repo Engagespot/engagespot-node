@@ -23,7 +23,7 @@ export interface IEngagespotProviderOverrideConfig{
     [key: string]: number;
 }
 
-type Channel = 'inApp' | 'webPush' | 'email' | 'mobilePush'
+type Channel = 'inApp' | 'webPush' | 'email' | 'mobilePush' | 'sms'
 
 export interface IEngagespotOverride{
     channels?: Array<Channel>
@@ -33,6 +33,7 @@ export interface IEngagespotOverride{
     smtp_email?: IEngagespotProviderOverrideConfig;
     default_webpush?: IEngagespotProviderOverrideConfig;
     fcm?: IEngagespotProviderOverrideConfig;
+    twilio_sms?:IEngagespotProviderOverrideConfig;
 }
 
 export interface IEngagespotSendParams {

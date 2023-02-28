@@ -23,7 +23,7 @@ export interface IEngagespotProviderOverrideConfig{
     [key: string]: number;
 }
 
-type Channel = 'inApp' | 'webPush' | 'email' | 'mobilePush' | 'sms'
+type Channel = "inApp" | "webPush" | "mobilePush" | "email" | "sms" | "chat" | "whatsapp" | "slack";
 
 export interface IEngagespotOverride{
     channels?: Array<Channel>
@@ -34,6 +34,12 @@ export interface IEngagespotOverride{
     default_webpush?: IEngagespotProviderOverrideConfig;
     fcm?: IEngagespotProviderOverrideConfig;
     twilio_sms?:IEngagespotProviderOverrideConfig;
+    textlocal_sms?: IEngagespotProviderOverrideConfig;
+    gupshup_sms? : IEngagespotProviderOverrideConfig;
+    gupshup_whatsapp?: IEngagespotProviderOverrideConfig;
+    twilio_whatsapp?: IEngagespotProviderOverrideConfig;
+    plivo_sms?: IEngagespotProviderOverrideConfig;
+    postmark_email?: IEngagespotProviderOverrideConfig
 }
 
 export interface IEngagespotSendParams {
@@ -46,6 +52,6 @@ export interface IEngagespotSendParams {
 
 export interface IEngagespotUserProfile {
     email?: string
-    phoneNumner?: string
+    phoneNumber?: string
     [key: string]: any
 }

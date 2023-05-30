@@ -20,7 +20,7 @@ export interface IEngagespotNotification {
 
 export interface IEngagespotProviderOverrideConfig{
     _config?: any
-    [key: string]: number;
+    [key: string]: any;
 }
 
 type Channel = "inApp" | "webPush" | "mobilePush" | "email" | "sms" | "chat" | "whatsapp" | "slack";
